@@ -148,6 +148,15 @@ plt.show()
 st.pyplot(plt)
 
 
+########### Pre Existing conditions plot ####
+st.write("Pre Existing conditions Distribution")
+pre_condition = data_frame["Any Pre-existing condition"].value_counts().plot(kind='bar', color='r')
+plt.xlabel('Any Pre-existing condition')
+plt.ylabel('Count')
+plt.title('Any Pre-existing condition vs Count')
+plt.show()
+st.pyplot(plt)
+
 
 ############## Pie chart ##########################
 # plt.title("Gender distribution")

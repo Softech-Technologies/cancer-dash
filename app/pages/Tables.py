@@ -28,4 +28,13 @@ def load_patient_metadata():
     st.dataframe(data_frame[start_idx:end_idx])
 
 
+def summary_data():
+    st.write("Data Summary")
+    data_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'clean_data.csv')
+    data_frame = pd.read_csv(data_path)
+    summary = data_frame.describe()
+    st.dataframe(summary)
+
+
 load_patient_metadata()
+summary_data()
