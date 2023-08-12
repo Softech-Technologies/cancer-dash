@@ -24,8 +24,8 @@ data_frame = pd.read_csv(data_path)
 def build_form():
     # User input form
     with st.form("User Information"):
-        latitude = st.number_input("Latitude", value=0)
-        longitude = st.number_input("Longitude", value=0)
+        latitude = st.number_input("Latitude", value=0.0,step=0.01)
+        longitude = st.number_input("Longitude", value=0.0,step=0.01)
         age = st.number_input("Age", min_value=0, max_value=100, value=20)
         any_condition = st.selectbox("Any Pre-existing conditions", ["Yes", "No"])
         gender = st.selectbox("Gender", ["Male", "Female"])

@@ -137,6 +137,18 @@ plt.title('Patient\'s Age vs Count')
 plt.show()
 st.pyplot(plt)
 
+######## Bar gender ################
+st.write("Gender plot")
+plt.figure(figsize=(5,4))
+gender_plot = data_frame["Patient's Gender"].value_counts().plot(kind='bar', color='r')
+plt.xlabel('Gender')
+plt.ylabel('Count')
+plt.title('Gender distribution')
+plt.show()
+st.pyplot(plt)
+
+
+
 ############## Pie chart ##########################
 # plt.title("Gender distribution")
 # pie = data_frame["Patient's Gender"].value_counts().plot(kind='pie', autopct='%1.1f%%', shadow=True, startangle=90)
