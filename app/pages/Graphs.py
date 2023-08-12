@@ -153,30 +153,6 @@ st.pyplot(fig)
 
 st.write("Breast cancer Detail Analysis")
 
-# st.sidebar.markdown("### Bar Chart: Average Measurements Per Tumor Type : ")
-#
-# avg_breast_cancer_df = breast_cancer_df.groupby("target").mean()
-# barf_axis = st.sidebar.multiselect(label="Average Measures per Tumor Type Bar Chart 1",
-#                                    options=measurements,
-#                                    default=["mean radius", "mean texture", "mean perimeter", "area error"])
-#
-# if bar_axis:
-#     barf = plt.figure(figsize=(6, 4))
-#
-#     barf_ax = barf.add_subplot(111)
-#
-#     sub_avg_breast_cancer_df = avg_breast_cancer_df[barf_axis]
-#
-#     sub_avg_breast_cancer_df.plot.bar(alpha=0.8, ax=barf_ax, title="Average Measurements per Tumor Type");
-#
-# else:
-#     barf_fig = plt.figure(figsize=(6, 4))
-#
-#     barf_ax = bar_fig.add_subplot(111)
-#
-#     sub_avg_breast_cancer_df = avg_breast_cancer_df[["mean radius", "mean texture", "mean perimeter", "area error"]]
-#
-#     sub_avg_breast_cancer_df.plot.bar(alpha=0.8, ax=barf_ax, title="Average Measurements per Tumor Type");
 ##################### Layout Application ##################
 
 container1 = st.container()

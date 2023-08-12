@@ -21,20 +21,12 @@ def get_data():
     data_path = os.path.join(os.path.dirname(__file__),'..','data','clean_data.csv')
     cancer_data = pd.read_csv(data_path)
     coordinates = cancer_data[['Longitude','Latitude']]
-    # df = pd.DataFrame({
-    #     "lat": np.random.randn(200) / 50 + 37.76,
-    #     "lon": np.random.randn(200) / 50 + -122.4,
-    #     "team": ['A', 'B'] * 100
-    # })
-    # return df
     coordinates['lat'] = coordinates['Latitude']
     coordinates['lon'] = coordinates['Longitude']
     coordinates['gender'] = cancer_data['Patient\'s Gender']
     return coordinates
 
 
-# if st.button('Generate new points'):
-#     st.session_state.df = get_data()
 if 'df' not in st.session_state:
     st.session_state.df = get_data()
 df = st.session_state.df
